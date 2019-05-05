@@ -1,0 +1,108 @@
+<?php
+defined('BASEPATH') OR exit('No direct script access allowed');
+?><!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Welcome to CodeIgniter</title>
+
+	<style type="text/css">
+
+	::selection { background-color: #E13300; color: white; }
+	::-moz-selection { background-color: #E13300; color: white; }
+
+	body {
+		background-color: #fff;
+		margin: 40px;
+		font: 13px/20px normal Helvetica, Arial, sans-serif;
+		color: #4F5155;
+	}
+
+	a {
+		color: #003399;
+		background-color: transparent;
+		font-weight: normal;
+	}
+
+	h1 {
+		color: #444;
+		background-color: transparent;
+		border-bottom: 1px solid #D0D0D0;
+		font-size: 19px;
+		font-weight: normal;
+		margin: 0 0 14px 0;
+		padding: 14px 15px 10px 15px;
+	}
+
+	code {
+		font-family: Consolas, Monaco, Courier New, Courier, monospace;
+		font-size: 12px;
+		background-color: #f9f9f9;
+		border: 1px solid #D0D0D0;
+		color: #002166;
+		display: block;
+		margin: 14px 0 14px 0;
+		padding: 12px 10px 12px 10px;
+	}
+
+	#body {
+		margin: 0 15px 0 15px;
+	}
+
+	p.footer {
+		text-align: right;
+		font-size: 11px;
+		border-top: 1px solid #D0D0D0;
+		line-height: 32px;
+		padding: 0 10px 0 10px;
+		margin: 20px 0 0 0;
+	}
+
+	#container {
+		margin: 10px;
+		border: 1px solid #D0D0D0;
+		box-shadow: 0 0 8px #D0D0D0;
+	}
+	.type{
+		font-size: 25px;
+	}
+	#btnsubmit{
+		height: 50px;
+		weight: 100px;
+		background-color: blue;
+		color: white;
+		font-size: 30px;
+		margin-left: 100px;
+	}
+	#btnphoto{
+		height: 50px;
+		weight:70px;
+		background-color: white;
+		color: blue;
+		font-size: 30px;
+	}
+	</style>
+</head>
+<body>
+	<form name="frm" method="post">
+		<h2>Your rating is here</h2>
+		<input type="text" name="review_rate"><br>
+		<h2>Title of review </h2>
+		<input type="text" name="review_title" size="100px"><br>
+		<h2>Your review </h2>
+		<input type="text" name="review_content" size="100px"> <br>
+		<h2>Traveller type</h2>
+		<div class="type">
+			<input type="radio" name="type" value="Mature couples" checked="checked">Mature couples</input>
+			<input type="radio" name="type" value="Solo travellers" >Solo travellers</input>
+			<input type="radio" name="type" value="Family with children" >Family with children</input>
+			<input type="radio" name="type" value="Groups of friends">Groups of friends</input>
+			<input type="radio" name="type" value="Young couples">Young couples</input>
+		</div>
+		<div>
+			<br><button id="btnphoto" name='photo' onclick="">Add photo</button>
+			<button id="btnsubmit" type="submit" value="submit">Submit your reviews</button>
+		</div>
+	</form>
+</body>
+</html>

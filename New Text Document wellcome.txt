@@ -1,0 +1,25 @@
+<?php
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+class Welcome extends CI_Controller {
+
+	public function index()
+	{
+		//echo "here";die;
+		$title = $this->input->post('review_title');
+		$content = $this->input->post('review_content');
+		$rate = $this->input->post('review_rate');
+		$type = $this->input->post('type');
+		if(!empty($title&&$content&&$rate)) {
+			$this->load->database();
+			$sql = "INSERT INTO reviews (title, content, rate,type) VALUES (".$this->db->escape($title).", ".$this->db->escape($content).",".$this->db->escape($rate).",".$this->db->escape($type).")";
+			$this->db->query($sql);
+		}
+
+			// echo $title;die;
+
+
+		$this->load->view('welcome_message');
+
+	}
+}
